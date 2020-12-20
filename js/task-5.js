@@ -3,10 +3,10 @@ const outputRef = document.querySelector('#name-output');
 
 inputRef.addEventListener('input', handlerInput);
 
-// inputRef.addEventListener('input', event => {
-//   outputRef.textContent = event.value;
-// });
-
 function handlerInput(event) {
-  outputRef.textContent = event.target.value;
+  if (inputRef.value === '') {
+    outputRef.textContent = 'незнакомец';
+  } else {
+    outputRef.textContent = event.target.value;
+  }
 }
