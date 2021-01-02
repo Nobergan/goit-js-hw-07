@@ -1,6 +1,3 @@
-// const categoriesRef = document.querySelector('#categories');
-// console.log(categoriesRef);
-
 const categoriesItemsRef = categories.querySelectorAll('.item');
 console.log(`В списке ${categoriesItemsRef.length} категории.`);
 

@@ -1,5 +1,5 @@
 const inputValidationRef = document.querySelector('#validation-input');
-console.dir(inputValidationRef);
+// console.dir(inputValidationRef);
 
 inputValidationRef.addEventListener('change', handlerInputValidation);
 

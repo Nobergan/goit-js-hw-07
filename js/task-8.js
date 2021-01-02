@@ -15,6 +15,7 @@ function countBoxesHandler(event) {
 
 function createBoxesHandler() {
   let boxSize = 30;
+  const newArr = [];
 
   for (let i = 0; i < count; i += 1) {
     const newBox = document.createElement('div');
@@ -27,8 +28,9 @@ function createBoxesHandler() {
     newBox.style.width += `${(boxSize += 10)}px`;
     newBox.style.height += `${(boxSize += 10)}px`;
 
-    boxesRef.append(newBox);
+    newArr.push(newBox);
   }
+  boxesRef.append(...newArr);
 
   inputRef.value = null;
 }
@@ -36,4 +38,6 @@ function createBoxesHandler() {
 function destroyBoxesHandler() {
   const boxes = document.querySelectorAll('#boxes div');
   boxes.forEach(box => box.remove());
+  // inputRef.value = '';
+  // boxes.innerHTMl = '';
 }
